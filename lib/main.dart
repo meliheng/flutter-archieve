@@ -1,4 +1,4 @@
-import 'package:anims/views/listview/views/notification_view.dart';
+import 'package:anims/views/onboarding/onboarding_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(
       theme: isDark ? ThemeData.dark() : ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      home: const NotificationView(),
+      home: const OnboardingView(),
     );
   }
 }
