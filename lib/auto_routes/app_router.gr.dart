@@ -73,3 +73,67 @@ class ProfileRoute extends PageRouteInfo<void> {
     },
   );
 }
+
+/// generated route for
+/// [ResultView]
+class ResultRoute extends PageRouteInfo<void> {
+  const ResultRoute({List<PageRouteInfo>? children})
+    : super(ResultRoute.name, initialChildren: children);
+
+  static const String name = 'ResultRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ResultView();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsDetailView]
+class SettingsDetailRoute extends PageRouteInfo<void> {
+  const SettingsDetailRoute({List<PageRouteInfo>? children})
+    : super(SettingsDetailRoute.name, initialChildren: children);
+
+  static const String name = 'SettingsDetailRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsDetailView();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsView]
+class SettingsRoute extends PageRouteInfo<void> {
+  const SettingsRoute({List<PageRouteInfo>? children})
+    : super(SettingsRoute.name, initialChildren: children);
+
+  static const String name = 'SettingsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsView();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsWrapper2]
+class SettingsWrapper2 extends PageRouteInfo<void> {
+  const SettingsWrapper2({List<PageRouteInfo>? children})
+    : super(SettingsWrapper2.name, initialChildren: children);
+
+  static const String name = 'SettingsWrapper';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsWrapper();
+    },
+  );
+}

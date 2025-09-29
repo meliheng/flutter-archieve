@@ -9,7 +9,11 @@ class MasterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: [const HomeRoute(), const ProfileRoute()],
+      routes: [
+        const HomeRoute(),
+        const ProfileRoute(),
+        const SettingsWrapper2(),
+      ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(
           currentIndex: tabsRouter.activeIndex,
@@ -17,6 +21,10 @@ class MasterView extends StatelessWidget {
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
           ],
         );
       },

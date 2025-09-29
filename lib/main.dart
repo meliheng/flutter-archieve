@@ -1,4 +1,9 @@
-import 'package:anims/views/onboarding/onboarding_view.dart';
+import 'package:anims/auto_routes/app_router.dart';
+import 'package:anims/go_router/go_app_router.dart';
+import 'package:anims/list/insta_list.dart';
+import 'package:anims/player/view/song_list.dart';
+import 'package:anims/scroll/infinite_scroll_view.dart';
+import 'package:anims/views/slide/slide_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +30,7 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(
       theme: isDark ? ThemeData.dark() : ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      home: const OnboardingView(),
+      home: InstaList(),
     );
   }
 }

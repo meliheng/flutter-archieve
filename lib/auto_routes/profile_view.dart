@@ -8,6 +8,7 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("build");
     return Scaffold(
       appBar: AppBar(title: const Text('Profile View')),
       body: Center(
@@ -17,10 +18,24 @@ class ProfileView extends StatelessWidget {
             const Text('Welcome to the Profile View!'),
             ElevatedButton(
               onPressed: () {
-                context.router.push(ProfileDetailRoute());
+                showModalBottomSheet(
+                  context: context,
+                  builder: (innerContext) {
+                    return Container(
+                      height: 200,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          innerContext.router.pop();
+                          innerContext.router.push(ProfileDetailRoute());
+                        },
+                        child: Text("Go Detail"),
+                      ),
+                    );
+                  },
+                );
                 // context.router.pushNamed('/settings');
               },
-              child: const Text('Go to Settings View'),
+              child: const Text('Go to Profil Detail View'),
             ),
           ],
         ),
