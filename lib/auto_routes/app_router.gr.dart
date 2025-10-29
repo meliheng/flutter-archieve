@@ -11,6 +11,22 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [DenemeView]
+class DenemeRoute extends PageRouteInfo<void> {
+  const DenemeRoute({List<PageRouteInfo>? children})
+    : super(DenemeRoute.name, initialChildren: children);
+
+  static const String name = 'DenemeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const DenemeView();
+    },
+  );
+}
+
+/// generated route for
 /// [HomeView]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -38,6 +54,22 @@ class MasterRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const MasterView();
+    },
+  );
+}
+
+/// generated route for
+/// [PaywallView]
+class PaywallRoute extends PageRouteInfo<void> {
+  const PaywallRoute({List<PageRouteInfo>? children})
+    : super(PaywallRoute.name, initialChildren: children);
+
+  static const String name = 'PaywallRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PaywallView();
     },
   );
 }
@@ -123,17 +155,33 @@ class SettingsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SettingsWrapper2]
-class SettingsWrapper2 extends PageRouteInfo<void> {
-  const SettingsWrapper2({List<PageRouteInfo>? children})
-    : super(SettingsWrapper2.name, initialChildren: children);
+/// [SettingsWrapper]
+class SettingsWrapper extends PageRouteInfo<void> {
+  const SettingsWrapper({List<PageRouteInfo>? children})
+    : super(SettingsWrapper.name, initialChildren: children);
 
   static const String name = 'SettingsWrapper';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const SettingsWrapper();
+      return const SettingsView();
+    },
+  );
+}
+
+/// generated route for
+/// [SplashView]
+class SplashRoute extends PageRouteInfo<void> {
+  const SplashRoute({List<PageRouteInfo>? children})
+    : super(SplashRoute.name, initialChildren: children);
+
+  static const String name = 'SplashRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SplashView();
     },
   );
 }

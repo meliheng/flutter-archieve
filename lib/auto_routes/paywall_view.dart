@@ -1,25 +1,25 @@
-import 'package:anims/auto_routes/app_router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class ProfileView extends StatelessWidget {
-  const ProfileView({super.key});
+class PaywallView extends StatelessWidget {
+  const PaywallView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    debugPrint(context.router.runtimeType.toString());
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile View')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 20,
           children: [
-            const Text('Welcome to the Profile View!'),
+            Text('Paywall View'),
             ElevatedButton(
               onPressed: () {
-                context.router.push(DenemeRoute());
+                context.router.pop();
               },
-              child: const Text('Go to Profil Detail View'),
+              child: Text('Go to Home'),
             ),
           ],
         ),

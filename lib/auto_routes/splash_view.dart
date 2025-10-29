@@ -3,23 +3,24 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class ProfileView extends StatelessWidget {
-  const ProfileView({super.key});
+class SplashView extends StatelessWidget {
+  const SplashView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile View')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 20,
           children: [
-            const Text('Welcome to the Profile View!'),
+            Text('Splash View'),
+            FlutterLogo(size: 100),
             ElevatedButton(
               onPressed: () {
-                context.router.push(DenemeRoute());
+                context.router.replaceAll([MasterRoute()]);
               },
-              child: const Text('Go to Profil Detail View'),
+              child: Text('Go to Home'),
             ),
           ],
         ),

@@ -16,7 +16,7 @@ class SettingsView extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                context.router.push(SettingsDetailRoute());
+                context.router.replaceAll([MasterRoute()]);
               },
               child: Text("Hello"),
             ),

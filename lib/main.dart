@@ -1,9 +1,6 @@
 import 'package:anims/auto_routes/app_router.dart';
-import 'package:anims/go_router/go_app_router.dart';
-import 'package:anims/list/insta_list.dart';
-import 'package:anims/player/view/song_list.dart';
-import 'package:anims/scroll/infinite_scroll_view.dart';
-import 'package:anims/views/slide/slide_view.dart';
+import 'package:anims/auto_routes/popup_cubit.dart';
+import 'package:anims/image_preview/image_preview2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,12 +22,20 @@ class _MainAppState extends State<MainApp> {
     });
   }
 
+  final appRouter = AppRouter();
+  final popupCubit = PopupCubit();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: isDark ? ThemeData.dark() : ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      home: InstaList(),
+      // routerDelegate: appRouter.delegate(
+      //   navigatorObservers: () => [AppRouteObserver(appRouter, popupCubit)],
+      // ),
+      // routeInformationParser: appRouter.defaultRouteParser(),
+      // builder: (context, child) =>
+      //     BlocProvider.value(value: popupCubit, child: child),
+      home: ImagePreview2(),
     );
   }
 }
